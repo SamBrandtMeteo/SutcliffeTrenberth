@@ -117,12 +117,12 @@ ax.add_feature(cfeature.STATES.with_scale('50m'),edgecolor='black',linewidth=0.2
 ax2=ax.twinx()
 ax.set_box_aspect(len(lat[:,0])/len(lat[0,:]))
 # Filled contour plot of thermal wind vorticity advection
-pcm=ax.contourf(lon,np.flip(lat,axis=0),adv*10**12,np.arange(-16,17,2),cmap='PuOr')
+pcm=ax.contourf(lon,np.flip(lat,axis=0),adv*10**12,np.arange(-16,17,2),cmap='BrBG')
 # Conditional statements to cover for values occasionally peaking the colorbar
 if len(adv[adv*10**12<-16])>0:
-    ax.scatter(lon[adv*10**12<-16],np.flip(lat)[adv*10**12<-16],transform=ccrs.PlateCarree(),s=1000,zorder=-1,c='#611f00')
+    ax.scatter(lon[adv*10**12<-16],np.flip(lat)[adv*10**12<-16],transform=ccrs.PlateCarree(),s=1000,zorder=-1,c='#002014')
 if len(adv[adv*10**12>16])>0:
-    ax.scatter(lon[adv*10**12>16],np.flip(lat)[adv*10**12>16],transform=ccrs.PlateCarree(),s=1000,zorder=-1,c='#12002e')
+    ax.scatter(lon[adv*10**12>16],np.flip(lat)[adv*10**12>16],transform=ccrs.PlateCarree(),s=1000,zorder=-1,c='#371400')
 # Vorticity contours
 ct1=ax.contour(lon,np.flip(lat,axis=0),geov500*10**5,np.arange(20,120,20),colors='black',linewidths=0.25)
 ax.clabel(ct1, inline=True, fontsize=4)
