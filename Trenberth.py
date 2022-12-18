@@ -140,7 +140,7 @@ cbar = plt.colorbar(pcm,cax=cax)
 cbar.ax.set_ylabel('Thermal Wind Vorticity Advection (x$10^{12}$ $m$ $s^{-2}$ $Pa^{-1}$)',fontsize=6)
 cbar.ax.tick_params(labelsize=8)  
 # Upper title
-ax.set_title('500 mb Sutcliffe-Trenberth QG Omega Approximation\nPurple = Forcing for Ascent, Orange = Forcing for Descent\nGFS Initialized '+ncss.metadata.time_span['begin'][0:10]+' '+ncss.metadata.time_span['begin'][11:13]+'z, Valid '+str(valid)[0:13]+'z',fontsize=8)
+ax.set_title('500 mb Sutcliffe-Trenberth QG Omega Approximation\nGreen = Forcing for Ascent, Brown = Forcing for Descent\nGFS Initialized '+ncss.metadata.time_span['begin'][0:10]+' '+ncss.metadata.time_span['begin'][11:13]+'z, Valid '+str(valid)[0:13]+'z',fontsize=8)
 # Lower title
 ax2.get_yaxis().set_visible(False)
 ax2.set_title('Absolute Geostrophic Vertical Vorticity (contours, x$10^{5}$ $s^{-1}$)\n600-400 mb Thermal Wind (barbs, x$10^{4}$ $m$ $s^{-1}$ $Pa^{-1}$)\nMade by Sam Brandt (GitHub: SamBrandtMeteo)',y=-0.18,fontsize=8)
